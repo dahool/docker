@@ -1,0 +1,20 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build and Publish
+
+on:
+  push:
+    branches:
+    - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: ./.github/workflows/_update_image.yml
+    with:
+      directory: "maven/jdk11"
+      buildFile: "Node18"
+      tag: "maven-node:maven3-openjdk-11-nodelts"
+    secrets: inherit
+    
