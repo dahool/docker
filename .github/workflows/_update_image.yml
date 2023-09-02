@@ -35,7 +35,7 @@ jobs:
         with:
           file: ${{ inputs.buildFile }}
           push: true
-          tags: dahool/${{ inputs.tag }}
+          tags: ${{ inputs.tag }}
 
 
           
