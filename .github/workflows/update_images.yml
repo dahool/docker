@@ -13,8 +13,7 @@ jobs:
   build:
     uses: ./.github/workflows/_update_image.yml
     with:
-      directory: "maven/jdk11"
-      buildFile: "Node18"
+      buildFile: "maven/jdk11/Node18"
       tag: "maven-node:maven3-openjdk-11-nodelts"
     secrets: inherit
     
