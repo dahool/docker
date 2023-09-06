@@ -7,6 +7,9 @@ on:
   workflow_dispatch:
 
 jobs:
+  build-jdk8:
+    uses: ./.github/workflows/update_jdk8.yml
+    secrets: inherit  
   build-jdk11:
     uses: ./.github/workflows/update_jdk11.yml
     secrets: inherit

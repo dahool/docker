@@ -1,0 +1,21 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build and Publish JDK 8
+
+on:
+  push:
+    branches:
+    - master
+    paths:
+      - 'maven/jdk8/**'    
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  build-jdk8-node18:
+    uses: ./.github/workflows/_update_image.yml
+    with:
+      buildFile: "maven/jdk8/Node18"
+      tag: "dahool/maven-node:maven3-ibmjdk-8-nodelts,dahool/maven-node:maven3-ibmjdk-8-node18"
+    secrets: inherit
