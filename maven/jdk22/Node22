@@ -1,6 +1,6 @@
-FROM maven:3-eclipse-temurin-20
+FROM maven:3-eclipse-temurin-22
 
-ENV NODE_VERSION=20
+ENV NODE_VERSION=22
 
 RUN apt-get update -yq \
    && apt-get install -y ca-certificates curl gnupg -yq \

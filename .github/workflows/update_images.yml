@@ -16,6 +16,9 @@ jobs:
   build-jdk17:
     uses: ./.github/workflows/update_jdk17.yml
     secrets: inherit
-  build-jdk20:
-    uses: ./.github/workflows/update_jdk20.yml
+  build-jdk22:
+    uses: ./.github/workflows/update_jdk21.yml
     secrets: inherit      
+  build-jdk22:
+    uses: ./.github/workflows/update_jdk22.yml
+    secrets: inherit          

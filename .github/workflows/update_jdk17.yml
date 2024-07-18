@@ -11,15 +11,13 @@ on:
       - 'maven/jdk17/**'    
   workflow_dispatch:
   workflow_call:    
-  schedule:
-    - cron: '0 0 1 * *'
     
 jobs:
   build-jdk17-node18:
     uses: ./.github/workflows/_update_image.yml
     with:
       buildFile: "maven/jdk17/Node18"
-      tag: "dahool/maven-node:maven3-openjdk-17-nodelts,dahool/maven-node:maven3-openjdk-17-node18"
+      tag: "dahool/maven-node:maven3-openjdk-17-node18"
     secrets: inherit    
   build-jdk17-node20:
     uses: ./.github/workflows/_update_image.yml
@@ -27,3 +25,9 @@ jobs:
       buildFile: "maven/jdk17/Node20"
       tag: "dahool/maven-node:maven3-openjdk-17-node20"
     secrets: inherit    
+  build-jdk17-node22:
+    uses: ./.github/workflows/_update_image.yml
+    with:
+      buildFile: "maven/jdk17/Node22"
+      tag: "dahool/maven-node:maven3-openjdk-17-node22"
+    secrets: inherit        

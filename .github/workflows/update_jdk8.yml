@@ -17,5 +17,5 @@ jobs:
     uses: ./.github/workflows/_update_image.yml
     with:
       buildFile: "maven/jdk8/Node18"
-      tag: "dahool/maven-node:maven3-ibmjdk-8-nodelts,dahool/maven-node:maven3-ibmjdk-8-node18"
+      tag: "dahool/maven-node:maven3-ibmjdk-8-node18"
     secrets: inherit
