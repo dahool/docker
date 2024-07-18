@@ -9,6 +9,4 @@ RUN apt-get update -yq \
 
 RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_VERSION.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
 
-RUN apt-get update -yq && apt-get install nodejs -yq
-
-RUN npm -g install npm@latest
+RUN apt-get update -yq && apt-get install nodejs -yq && node --version
