@@ -14,5 +14,5 @@ jobs:
     uses: ./.github/workflows/_update_image.yml
     with:
       buildFile: "runner/ubuntu/Latest"
-      tag: "dahool/ubuntu-runner:act-latest"
+      tag: "dahool/ubuntu-runner:act-latest-v1"
     secrets: inherit    
